@@ -10,6 +10,7 @@ sub main{
         '@llkj.com',
         'jklj778dd@somewhere77.il',
         'lkjl@7788',
+        'godric.phoenix@gmail.com'
     );
     for my $email(@emails){
         if($email =~ /\w+\@\w+\.\w+/){

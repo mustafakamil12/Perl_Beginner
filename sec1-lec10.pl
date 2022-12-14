@@ -13,7 +13,7 @@ sub main{
     my $text = 'I am 117 years old tomorrow';
     my $text1 = '.Iam117years_old_tomorrow.';
 
-    if($text =~ /(\d*)/){
+    if($text =~ /(\d*)/){           # using * mean 0 or more, considering start reading from the begining of the line
         print "Matched: '$1'\n";
     }
 

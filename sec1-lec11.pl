@@ -4,6 +4,7 @@ use warnings;
 $|=1;
 
 sub main{
+        # . any charcter
         # * zero or more of the preceding character; e.g.
         # + one or more of the preceding, as many as possible
         # *? zero or more or the precding charcter, as few as possible.
@@ -45,6 +46,10 @@ sub main{
 
         if($text1 =~ /(DE\d)/){
             print "8. Matched: '$1'\n"
+        }
+
+        if($text1 =~ /(DE\$\d{3,})/){
+            print "9. Matched: '$1'\n";
         }
 
 
