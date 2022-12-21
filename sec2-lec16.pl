@@ -23,7 +23,7 @@ sub main{
 
         # my @values = split ',',$line;
         my @values = split /\s*,\s*/,$line;
-        # print $values[0] . "\n";
+        print $values[0] . "\n";
         # print join '|', @values ;
         # print Dumper(@values);
 
@@ -42,7 +42,8 @@ sub main{
     print "length of \@lines = " . scalar(@lines) . "\n";
     
     foreach my $line(@lines){
-        # print "$line \n";
+        # print "@{$line} \n";
+        print "Name: " . $line -> [0] . "\n";
         print Dumper($line);
     }
 }

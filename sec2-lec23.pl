@@ -21,10 +21,10 @@ sub main{
         # $line =~ s/^\s*//;
         # $line =~ s/\s*$//;
 
-        $line =~ s/^\s*|\s*$//g;
-        $line =~ s/\?|approx\.//g;
-
-        $line =~ /\S+/ or next;
+        # we can add series of filters as regex to filter our works.
+        $line =~ s/^\s*|\s*$//g;    # substitute
+        $line =~ s/\?|approx\.//g;  # substitute
+        $line =~ /\S+/ or next;     # match
 
         chomp $line;
 

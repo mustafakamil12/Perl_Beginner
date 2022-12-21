@@ -14,5 +14,8 @@ my @values;
 push @values, \@animals;
 push @values, \@fruits;
 
-print '$values[0][0] => ' . $values[1][2] . "\n";
+print '$values[1][2] => ' . $values[1][2] . "\n";
 print Dumper(@values);
+
+my $fruits_ref = \@fruits;
+print $fruits_ref -> [0] . "\n";

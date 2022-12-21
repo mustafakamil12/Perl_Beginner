@@ -29,6 +29,10 @@ sub main{
         print "$month: $value \n";
     }
 
+    while(my($key,$value) = each %days){
+        print "$key : $value \n";
+    }
+
 }
 
 main();

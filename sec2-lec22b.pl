@@ -18,17 +18,20 @@ sub main{
 
     LINE: while(my $line = <INPUT>){
 
+        # check if the line empty.
         $line =~ /\S+/ or next;
 
         chomp $line;
 
         my @values = split /\s*,\s*/, $line;
 
+        # check if teh line missed any value
         if(scalar(@values) < 3){
             print "Invalid Line: $line\n";
             next;
         }
 
+        #check if there's any empty value
         foreach my $value(@values){
             if($value eq ''){
                 print "Invalid line: $line\n";
