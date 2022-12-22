@@ -17,7 +17,7 @@ sub main{
     # print $content->{content};
     
     my $pageContent = $content->{content};
-    while($exCont =~ m|<\s*a\s+[^>]*href\s*=\s*['"]([^>"']+)['"][^>]*>\s*([^<>]*)\s*</|sig){
+    while($exCont =~ m|<\s*a\s+[^>]*href\s*=\s*['"]([^>"']+)['"]>\s*([^<>]*)\s*<\/|sig){
         print "$2: $1\n";
     }
 

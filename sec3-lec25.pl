@@ -15,7 +15,7 @@ sub main{
     # print $content->{content};
     my $pageContent = $content->{content};
 
-    if($pageContent =~ m'<h3 class=.+?><p>(.+?)</p>'i){
+    if($pageContent =~ m'<h3 class=.+?><p>(.+?)</p>'i){   # using m to use some chars rather than // and consider it as regex.
         my $title = $1;
         print "Title: $title\n";
     }
