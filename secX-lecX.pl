@@ -1,23 +1,17 @@
 use strict;
 use warnings;
+use Data::Dumper;
 use Getopt::long;
 
 $|=1;
 
 sub main{
-    my %firstHash = (userid => undef,
-                    serverid => undef,
-                    env => undef);
-
-print "\%firstHash = %firstHash\n";
-
-# GetOptions = (\%firstHash,
-#     "csi=s",
-#     "server=s"
-# );        
-
-
-# print GetOptions . "\n";
+    my %opts = {
+        server => undef,
+        userid => undef,
+        verbose => undef,
+        s => undf,
+    }
 }
 
 main();

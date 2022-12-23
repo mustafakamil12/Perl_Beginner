@@ -17,7 +17,7 @@ sub main{
 }
 
 sub checkusage{
-    return 1;
+    return 0;
 }
 
 sub usage{

@@ -1,36 +1,19 @@
 use strict;
 use warnings;
+use Data::Dumper;
+use Getopt::Std;
 
 $|=1;
 
 sub main{
-    my $input = 'test1.csv';
+    mySub(1,'testing',3);
+}
 
-    unless(open(INPUT, $input)){
-        die "Unable to open $input\n";
-    }
-    
-    <INPUT>;
+sub mySub{
+    print Dumper(@_);
+    my ($langNo, $name, $result) = @_;
 
-    my @data;
-
-    while(my $line = <INPUT>){
-        chomp $line;
-        my($Name,$Payment,$Date) = split /\s*,\s*/,$line;
-
-        my %values = (
-            "Name" => $Name,
-            "Payment" => $Payment,
-            "Date" => $Date,
-        );
-
-        push @data, \%values;
-    }
-    close INPUT;
-
-    foreach my $data(@data){
-        print "$data->{'Payment'}\n";
-    }
+    print "$langNo, $name, $result\n";
 }
 
 main();
