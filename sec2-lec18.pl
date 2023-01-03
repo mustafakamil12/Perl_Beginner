@@ -26,7 +26,7 @@ sub main{
     my @months = keys %months;
     foreach my $month(@months){
         my $value = $months{$month};
-        print "$month: $value \n";
+        print "$month => $value \n";
     }
 
     while(my($key,$value) = each %days){
